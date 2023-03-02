@@ -31,3 +31,7 @@
         GROUP BY USER_ID, PRODUCT_ID
         HAVING COUNT(USER_ID) >= 2
         ORDER BY USER_ID ASC, PRODUCT_ID DESC 
+        
+        
+        - ASC 오름차순 ex)1, 2, 3, 4 .....
+        - DESC 내림차순 ex) 5, 4, 3, 2 .....
