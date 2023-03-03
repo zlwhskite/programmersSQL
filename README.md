@@ -46,3 +46,6 @@
         FROM DOCTOR
         WHERE MCDP_CD = 'CS' OR MCDP_CD = 'GS' 
         ORDER BY HIRE_YMD DESC, DR_NAME  ASC 
+        
+        
+         DATE_FORMAT() y대문자주의
