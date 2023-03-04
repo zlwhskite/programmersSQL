@@ -48,4 +48,19 @@
         ORDER BY HIRE_YMD DESC, DR_NAME  ASC 
         
         
-         DATE_FORMAT() y대문자주의
+        - DATE_FORMAT() y대문자주의
+         
+         
+ - 상반기 아이스크림 총주문량이 3,000보다 높으면서 아이스크림의 주 성분이 과일인 아이스크림의 맛을 총주문량이 큰 순서대로 조회하는 SQL 문을 작성해주세요.
+
+######
+        SELECT FLAVOR FROM FIRST_HALF 
+        JOIN ICECREAM_INFO ON FIRST_HALF.FLAVOR = ICECREAM_INFO.FLAVOR
+        WHERE ICECREAM_INFO.INGREDIRNT_TYPE = 'fruit_based' 
+        AND TOTAL_ORDER > 3000
+        ORDER BY TOTAL_ORDER DESC
+        
+        - 순서 : FROM -> ON -> JOIN -> WHERE -> GROUP BY -> HAVING -> SELECT
+
+        
+        
