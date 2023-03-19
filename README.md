@@ -81,6 +81,16 @@
         JOIN OFFLINE_SALE ON PRODUCT.PRODUCT_ID = OFFLINE_SALE.PRODUCT_ID
         GROUP BY PRODUCT_CODE
         ORDER BY SALES DESC, PRODUCT_ID ASC
-
+        
+     
+- 프로그래머스 Lv2 조건에 맞는 도서와 저자 리스트 출력하기
+    ->'경제' 카테고리에 속하는 도서들의 도서 ID(BOOK_ID), 저자명(AUTHOR_NAME), 출판일(PUBLISHED_DATE) 리스트를 출력하는 SQL문을 작성해주세요. 
+        결과는 출판일을 기준으로 오름차순 정렬해주세요.
+        
+######
+        
+        SELECT BOOK_ID, AUTHOR_NAME, PUBLISHED_DATE FROM BOOK 
+        JOIN AUTHOR ON BOOK.AUTHOR_ID = AUTHOR.AUTHOR_ID
+        WHERE CATEGORY = '경제' ORDER BY PUBLISHED_DATE
         
         
