@@ -108,5 +108,18 @@
         ORDER BY ANIMAL_OUTS.ANIMAL_ID ASC
         
         
+- 중복된 데이터 하나씩 출력
+
+######
+        select * from
+		( select * from files 
+		where 
+		(id, product_id ) 
+		in 
+		( select min(id) as id, product_id from files group by product_id ) 
+		order by id desc ) 
+		files 
+		group by files.product_id 
+        
         
         
