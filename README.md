@@ -120,6 +120,8 @@
 		order by id desc ) 
 		files 
 		group by files.product_id 
+		
+	- 서브쿼리 -> 메인쿼리 순
         
         
         
