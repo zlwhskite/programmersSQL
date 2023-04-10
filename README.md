@@ -121,7 +121,7 @@
 		files 
 		group by files.product_id 
 		
-		- 서브쿼리 -> 메인쿼리 순
+	- 서브쿼리 -> 메인쿼리 순
         
         
         
