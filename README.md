@@ -111,7 +111,7 @@
 - 중복된 데이터 하나씩 출력
 
 ######
-        select * 
+	select * 
 	from
 	( select * from files 
 	where 
