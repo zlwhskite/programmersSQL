@@ -111,16 +111,18 @@
 - 중복된 데이터 하나씩 출력
 
 ######
-	select * 
-	from
-	( select * from files 
-	where 
-	(id, product_id ) 
-	in 
-	( select min(id) as id, product_id from files group by product_id ) 
-	order by id desc ) 
-	files 
-	group by files.product_id 
+	SELECT * 
+	FROM
+	( SELECT * FROM FILES 
+	wWHERE 
+	(ID, PRODUCT_ID) 
+	IN 
+	( SELECT MIN(ID) AS ID, PRODUCT_ID 
+	FROM FILES 
+	GROUP BY PRODUCT_ID ) 
+	ORDER BY ID DESC ) 
+	FILES 
+	GROUP BY FILES.PRODUCT_ID 
 		
 	
 	
