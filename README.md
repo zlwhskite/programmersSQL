@@ -183,4 +183,17 @@
 	FROM ANIMAL_INS
 	GROUP BY ANIMAL_TYPE
 	ORDER BY ANIMAL_TYPE ASC
+	
+	
+-프로그래머스 LV4 보호소에서 중성화한 동물
+	->보호소에서 중성화 수술을 거친 동물 정보를 알아보려 합니다. 보호소에 들어올 당시에는 중성화1되지 않았지만, 보호소를 나갈 당시에는 중성화된 동물의 아이디와 생물 종, 이름을 조회하는 아이디 순으로 조회하는 SQL 문을 작성해주세요.
+	
+######
+
+	SELECT ANIMAL_INS.ANIMAL_ID, ANIMAL_INS.ANIMAL_TYPE, ANIMAL_INS.NAME 
+	FROM ANIMAL_INS
+	JOIN ANIMAL_OUTS 
+	ON ANIMAL_OUTS.ANIMAL_ID = ANIMAL_INS.ANIMAL_ID
+	WHERE ANIMAL_OUTS.SEX_UPON_OUTCOME != ANIMAL_INS.SEX_UPON_OUTCOM
+	ORDER BY ANIMAL_INS.ANIMAL_ID ASC
 
