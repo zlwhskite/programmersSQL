@@ -224,3 +224,15 @@
 	- TRUNCATE(숫자, 자릿수 설정) : 자릿수 설정만큼 버린다, 자릿수 설정에 반드시 값을 넣어줘야한다.
 
 
+-프로그래머스 Lv3 즐겨찾기가 가장 많은 식당 정보 출력하기
+	->REST_INFO 테이블에서 음식종류별로 즐겨찾기수가 가장 많은 식당의 음식 종류, ID, 식당 이름, 즐겨찾기수를 조회하는 SQL문을 작성해주세요. 이때 결과는 음식 종류를 기		준으로 내림차순 정렬해주세요.
+
+######
+
+	SELECT FOOD_TYPE, REST_NAME, REST_ID, FAVORITES 
+	FROM REST_INFO
+	WHERE (FOOD_TYPE, FAVORITES) 
+	IN 
+	(SELECT FOOD_TYPE, MAX(FAVORITES) FROM REST_INFO GROUP BY FOOD_TYPE)
+	ORDER BY REST_NAME DESC	
+
